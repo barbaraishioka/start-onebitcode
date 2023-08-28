@@ -52,11 +52,12 @@ function calculateTip(event) {
       (billFormatToNumber * serviceQuality.value) / amountOfPeople.value;
 
     calculateTotalBill =
-      (billFormatToNumber + calculateTip) / amountOfPeople.value;
+      (billFormatToNumber + calculateTip * amountOfPeople.value) /
+      amountOfPeople.value;
   }
 
-  tip.innerHTML = calculateTip;
-  totalBillValue.innerHTML = calculateTotalBill;
+  tip.innerHTML = calculateTip.toFixed(2);
+  totalBillValue.innerHTML = calculateTotalBill.toFixed(2);
 
   if (amountOfPeople.value > 1) {
     each.forEach((each) => {
