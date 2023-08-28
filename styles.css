@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary-color: #000;
+  --secondary-color: #696969;
+  --tertiary-color: #dcdcdc;
+}
+
+body {
+  background-color: var(--primary-color);
+  background: url(./img/tip.avif) center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 350px;
+  backdrop-filter: blur(1rem);
+  padding: 4rem;
+}
+
+section {
+  margin-block: 2rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+section,
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+label,
+input,
+select,
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+input,
+select,
+button {
+  border-bottom: 1px solid #000;
+}
+
+input:focus,
+select:focus {
+  outline: 1px solid var(--secondary-color);
+  border-radius: 2px;
+}
+
+option {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button {
+  transition: background 0.2s;
+}
+
+button:focus {
+  border: 1px solid var(--primary-color);
+  outline: transparent;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+#totalTip {
+  margin: 2rem 0 1rem;
+}
+
+#totalTip,
+#totalBill {
+  width: 100%;
+  text-align: center;
+  display: none;
+  padding: 0;
+}
+
+#totalBill {
+  font-weight: 900;
+}
+
+.each {
+  display: none;
+}

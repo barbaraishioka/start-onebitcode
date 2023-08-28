@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <title>Garçom, a conta!!!</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Garçom, a conta!!!</h1>
+      <form id="tipsForm">
+        <section>
+          <label for="bill">
+            Quanto ficou a conta?
+            <input
+              id="bill"
+              name="bill"
+              placeholder="R$ 100,00"
+              type="text"
+              autofocus
+              required
+              data-type="currency"
+            />
+          </label>
+
+          <label for="serviceQuality">
+            Como foi o serviço?
+            <select id="serviceQuality" name="serviceQuality" required>
+              <option disabled selected value="?">-- Escolha uma opção</option>
+              <option value="0.2">20% - Incrível</option>
+              <option value="0.15">15% - Bom</option>
+              <option value="0.1">10% - Aceitável</option>
+              <option value="0.05">05% - Ruim</option>
+              <option value="0">0% - Péssimo</option>
+            </select>
+          </label>
+
+          <label for="amountOfPeople">
+            Quantas pessoas vão dividir a conta?
+            <input
+              id="amountOfPeople"
+              name="amountOfPeople"
+              type="number"
+              min="1"
+              value="1"
+              placeholder="1"
+              required
+            />
+          </label>
+        </section>
+
+        <button type="submit">Calcular</button>
+
+        <label for="tip" id="totalTip">
+          Gorjeta total: R$
+          <span id="tip" name="tip">0,00</span>
+          <span class="each">cada</span>
+        </label>
+
+        <label for="totalBillValue" id="totalBill">
+          Valor total: R$
+          <span id="totalBillValue" name="totalBillValue">0,00</span>
+          <span class="each">cada</span>
+        </label>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
